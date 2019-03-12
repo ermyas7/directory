@@ -73,3 +73,54 @@ body{
   padding: 1rem 1.5rem;
   background-color: #F20056;
 }
+
+.person{
+  margin-left: 2rem;
+}
+
+.person-back{
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 300;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.person-contact{
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.person-value{
+  margin-bottom: 2rem;
+}
+
+.person-value-subscribe{
+  color: #00008b;
+}
+
+.person-contact-name, .person-contact-number{
+  margin-bottom: 2rem;
+}
+
+.person-contact-name-label, .person-contact-number-label{
+  display: block;
+}
+
+.person-contact-name-input, .person-contact-number-input{
+  border: 1px solid #777;
+  padding: .5rem 1rem;
+  width: 25rem;
+}
+
+.person-contact-name-input:focus, .person-contact-number-input:focus{
+  outline: none;
+}
+.person-contact-number-label{
+
+}

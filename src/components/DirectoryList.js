@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import Lists from './Lists';
+import Lists from './Lists'
+import {Link} from 'react-router-dom'
+
 export class DirectoryList extends Component {
   render() {
     return (
         <div className="component-body-container">
-        <a href="/add" className="add">Add</a>
+        <Link to="/add" className="add">Add</Link>
         <div className="grid-container heading-container">
             <h3>Name</h3>
             <h3>Phone</h3>
