@@ -9,8 +9,16 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 class App extends Component {
   state = {
     users : [
-
+      {
+        name: 'Ermyas',
+        number: 1234
+      }
     ]
+  }
+
+  //add new list
+  addUser = (user) => {
+    this.setState({users: [...this.state.users, user]});
   }
   render() {
     return (
@@ -18,10 +26,10 @@ class App extends Component {
         <div className="main-container">
           <div className="component-container">
             <Header heading="Phone Directory"/>
-            <Route exact path='/' render={render => (
+            <Route exact path='/' render={props => (
               <DirectoryList users={this.state.users}/>
             )}/>
-            <Route path='/add' component={AddUser}/>
+            <Route path='/add' render={() =><AddUser addUser={this.addUser}/>}/>
           </div>
         </div>
       </Router>
