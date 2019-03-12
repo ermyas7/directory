@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
+import ListItem from './ListItem';
 
 export class Lists extends Component {
   render() {
     return (
-        <div className="grid-container">
-            <p>Ermyas</p>
-            <p>1224343434</p>
-            <p className="delete">Delete</p>
-        </div>
+        this.props.users.map((user, index) => <ListItem user={user} key={this.index}/>)
     )
   }
 }

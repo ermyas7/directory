@@ -6,14 +6,7 @@ import DirectoryList from './components/DirectoryList';
 class App extends Component {
   state = {
     users : [
-      {
-        name: 'Ermyas',
-        number: 12324434
-      },
-      {
-        name: 'Mick',
-        number: 323343444
-      }
+
     ]
   }
   render() {
