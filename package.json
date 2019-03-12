@@ -2,7 +2,7 @@
   "name": "directory",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ermyas7.github.io/directory",
+  "homepage": "https://ermyas7.github.io/directory/",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

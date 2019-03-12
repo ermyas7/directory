@@ -40,12 +40,12 @@ class App extends Component {
         <div className="main-container">
           <div className="component-container">
             <Header heading={this.state.heading}/>
-            <Route exact path='/' render={props => (
+            <Route exact path={process.env.PUBLIC_URL + '/'} render={props => (
               <DirectoryList users={this.state.users} 
               removeUser={this.removeUser} 
               changeHeading={this.changeHeading}/>
             )}/>
-            <Route path='/add' 
+            <Route path={process.env.PUBLIC_URL +'/add'} 
             render={() =><AddUser addUser={this.addUser}
              resetHeading={this.resetHeading}/>}/>
           </div>
