@@ -9,11 +9,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 class App extends Component {
   state = {
     users : [
-      {
-        id: uuid.v4(),
-        name: 'Ermyas',
-        number: 1234
-      }
+      
     ],
     heading: 'Phone directory'
   }
