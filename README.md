@@ -1,4 +1,5 @@
-This project was bootstrapped with [project URL](https://ermyas7.github.io/directory/).
+[project URL](https://ermyas7.github.io/directory/).
+
 ##https://ermyas7.github.io/directory/
 ## Available Scripts
 
