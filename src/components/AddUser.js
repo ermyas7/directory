@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 export class AddUser extends Component {
    state = {
            name: '',
-           number: ''
+           number: '',
+           error: ''
     } 
 
    //input value handler
@@ -16,14 +17,21 @@ export class AddUser extends Component {
 
    onSubmit = (e) => {
        e.preventDefault();
-       this.props.addUser({name: this.state.name, number: this.state.number})
-       this.setState({name: '', number: ''})
+       if(this.state.name && this.state.number){
+            this.props.addUser({name: this.state.name, number: this.state.number})
+            this.setState({name: '', number: '', error: ''})
+            this.props.resetHeading();
+            this.props.history.push('/');
+       }
+       this.setState({error: 'Please fill all details'})
+       
    }
   render() {
     return (
         <div className="person">
-            <Link to='/' className="person-back">Back</Link>  
+            <Link to='/' className="person-back" onClick={this.props.resetHeading}>Back</Link>  
             <form className="person-contact" onSubmit={this.onSubmit}>
+            <p style={{color: 'red', margin:'3px 0' }}>{this.state.error}</p>
             <div className="person-contact-name">
                 <label htmlFor="name" className="person-contact-name-label">Name:</label>
                 <input type="text"
@@ -37,7 +45,7 @@ export class AddUser extends Component {
                 <label htmlFor="number" className="person-contact-number-label">
                     Phone:
                 </label>
-                <input type="text"
+                <input type="number"
                  className="person-contact-number-input"
                   id="number" 
                   name="number"
@@ -56,4 +64,4 @@ export class AddUser extends Component {
   }
 }
 
-export default AddUser
+export default withRouter(AddUser)
